@@ -1,0 +1,8 @@
+
+Osztály		Strength	Defense		Dexterity	Constitution	Intelligence	Wisdom	Charisma
+Warrior		16		14		12		—		—		—	-
+Archer		14		12		—		16		—		—	-
+Mage		8		10		—		—		18		14	-
+Jester		10		12		14		-		-		-	16
+
+

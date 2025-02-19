@@ -1,0 +1,28 @@
+"1. Warrior (Harcos)
+A harcos egy erőteljes közelharci karakter, aki a fizikai erejére és a védekezésre összpontosít. Képes nagy mennyiségű sérülést okozni, és jól bírja a csatákat.
+Strength (Erő): A harcos fizikai ereje, amely meghatározza a támadások erejét és a súlyos páncéllal való mozgás képességét.
+Defense (Védelem): A harcos képessége, hogy elkerülje vagy csökkentse a támadások hatását. Minél magasabb, annál jobban képes ellenállni a sérüléseknek.
+Dexterity (Ügyesség): A harcos gyorsasága és mozgékonysága. Ez befolyásolja a támadások sebességét, valamint a csapdák és a támadások elkerülésének esélyét."
+
+"2. Archer (Íjász)
+Az íjász távolsági harcra specializálódott, és nagy hangsúlyt fektet a kitartásra, az erőre és a védekezésre. Ő egy pontos és gyors támadó, aki a harc távolabbi aspektusait uralja.
+Strength (Erő): Az íjász fizikai ereje, amely befolyásolja a távolsági támadásokat (pl. nyílzápor) és a súlyosabb íjak használatát.
+Defense (Védelem): Az íjász is képes elkerülni vagy csökkenteni a támadások hatását, de a hangsúly inkább a mozgékonyságon van, mint a páncél viselésén.
+Constitution (Állóképesség): Az íjász állóképessége és kitartása a hosszú távú küzdelmekhez. Ez befolyásolja az életpontok számát és a sérülésekhez való ellenállást."
+
+"3. Mage (Mágus)
+A mágus a varázslásra összpontosít, és a tudása és bölcsessége révén irányítja az elemeket. A mágus a legkevésbé védett a közelharci támadások ellen, de rendkívül erős varázslatokkal rendelkezik.
+Strength (Erő): A mágus erője viszonylag alacsony, mivel ő inkább a varázslatokra épít. Az erő befolyásolja a fizikai támadásokat, de nem jellemző a mágusra.
+Defense (Védelem): A mágus védelme alapvetően a varázslataiban rejlik, és a varázslatok által elkerült támadásokban. Nincs nagy fizikai védelme, de a varázslatok segítenek neki.
+Intelligence (Intelligencia): A mágus intelligenciája meghatározza, hogy milyen erős varázslatokat képes használni, valamint a varázslatok hatékonyságát és azok tanulásának gyorsaságát.
+Wisdom (Bölcsesség): A mágus bölcsessége befolyásolja a varázslatok előrejelzését, az érzékelési képességeit és azt, hogy hogyan reagál a mágikus hatásokra. Segít a varázslatok pontosabb végrehajtásában és a mágikus világ megértésében."
+
+"4.Jester(Bolond):
+Charisma (Karizma): 16
+A jester legerősebb tulajdonsága, mivel a karizma segíti őt a szórakoztatásban, manipulációban és társas kapcsolatokban.
+Dexterity (Ügyesség): 14
+Az ügyesség segíti a jester mozgékonyságát, hogy gyorsan reagáljon, elkerülje a támadásokat és végrehajtsa a trükköket.
+Strength (Erő): 10
+Mivel a jester nem harcos, az erő nem annyira hangsúlyos nála. Alacsonyabb érték, de még mindig szükséges némi fizikai erő, ha valamilyen támadásra vagy közelharcra kerülne sor.
+Defense (Védelem): 12
+A jester nem rendelkezik komoly páncéllal, de az ügyessége és trükkjei segíthetnek abban, hogy elkerülje a támadásokat. A védekezés mérsékelten fontos számára.

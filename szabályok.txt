@@ -1,0 +1,150 @@
+A Dungeons & Dragons (D&D) egy asztali szerepjáték, amelyben a játékosok fiktív karaktereket irányítanak, miközben egy mesélő (Dungeon Master, DM) vezetésével egy képzeletbeli világban kalandoznak. A szabályrendszer sokféle aspektust ölel fel, de itt a legfontosabb alapokat ismertetem:
+
+### 1. **A karakterek létrehozása:**
+   - **Rasa (faj):** A karakterek választhatnak különböző fajok közül, mint például emberek, elfek, törpök, orkák stb. Minden fajnak megvannak a saját különleges tulajdonságai.
+   - **Osztály (class):** A karakterek választhatnak egy osztályt, amely meghatározza a karakter képességeit és szerepét a csapatban (pl. harcos, varázsló, tolvaj, pap, stb.).
+   - **Tulajdonságok:** A karakterek alapvető tulajdonságai a következők: Erő (Strength), Ügyesség (Dexterity), Állóképesség (Constitution), Intelligencia (Intelligence), Bölcsesség (Wisdom), és Karizma (Charisma). Ezek a statisztikák határozzák meg a karakter fizikai és mentális képességeit.
+   - **Képességpontok és készségek:** A karakterek különböző készségekkel rendelkeznek, például észlelés, lopakodás, beszéd, stb., amelyek a tulajdonságaik alapján javulnak.
+
+### 2. **Döntéshozatal és dobások:**
+   - **D20 rendszer:** A D&D alapvetően a **D20 rendszerre** épít, ahol a legtöbb cselekvést egy 20 oldalas dobókockával (D20) kell meghatározni. A DM kéri a játékostól, hogy dobjon, és a dobás eredménye hozzáadódik a karakter megfelelő képességeihez, hogy meghatározza a siker vagy kudarc mértékét.
+   - **Képességellenőrzés:** Ha például egy karakter megpróbál elkerülni egy csapdát, a DM meghatározza, hogy a dobás a karakter ügyességétől függ (D20 + ügyesség módosító), és összehasonlítja azt a csapda nehézségi fokával.
+   - **Támadás és sebzés:** A harcokban a D20 dobás határozza meg, hogy a karakter sikeresen eltalálja-e az ellenfelet, majd egy további dobás meghatározza a sebzést.
+
+### 3. **A harc:**
+   - **Fordulók:** A harcok körökre oszlanak, és minden karakter a saját körében cselekedhet (például mozoghat, támadhat, varázsolhat, stb.). A játékosok és a DM váltakozva cselekszenek a körökben.
+   - **Akciók:** A karakterek egy körben általában egy akciót hajthatnak végre (pl. támadás, varázslás, mozgás), és egy „bónusz akciót” (ha van ilyen képességük) vagy mozgást végezhetnek.
+   - **Harc: Sebzés és életpontok:** A karakterek és az ellenségek egyaránt rendelkeznek életpontokkal (HP). Ha egy karakter eléri a 0 HP-t, eszméletét veszti, és nagyobb sérülés esetén meghalhat. A harcok során az ellenfelek sebzést kapnak, amely csökkenti az életpontjaikat.
+
+### 4. **Varázslatok:**
+   - **Varázslók és varázslatok:** Egyes osztályok (például varázslók, papok) varázslatokat használhatnak, amelyek különféle hatásokkal bírnak, mint gyógyítás, tűzlabdák vagy átok. A varázslatoknak van egy meghatározott napi felhasználási száma.
+   - **Varázslatok dobása:** A varázslatokhoz is szükséges egy dobás, hogy eldöntsük, sikerül-e a varázslat (általában egy D20-as dobás).
+
+### 5. **A mesélő (Dungeon Master):**
+   - **A DM szerepe:** A Dungeon Master (DM) a játék vezetője, aki irányítja a történetet, a világot, az NPC-ket (nem játékos karaktereket), valamint az összes kalandot és találkozót. A DM irányítja a játék világának minden aspektusát, és kezeli az összes szituációt, amit a játékosok nem terveznek előre.
+
+### 6. **Kalandok és történetek:**
+   - **A kalandok:** A játékosok egy előre megírt kalandban (vagy a DM által kitalált történetben) vesznek részt. A kaland során különböző kihívásokkal, csatákkal, rejtélyekkel és szereplőkkel találkoznak.
+   - **Szerepjáték:** A D&D nemcsak a harcról szól, hanem a szerepjátékos elemekről is, ahol a játékosok döntéseket hoznak, beszélgetnek az NPC-kkel, diplomáciai megoldásokat keresnek, vagy morális dilemmák elé kerülnek.
+
+### 7. **Fejlődés:**
+   - **Tapasztalati pontok (XP):** A játékosok tapasztalati pontokat (XP) gyűjtenek, ha legyőznek ellenségeket, megoldanak feladatokat, vagy sikeresek a kaland során. A megfelelő XP mennyiség elérése után a karakterek szintet lépnek, és új képességeket, nagyobb életerőt vagy varázslatokat nyernek.
+
+Ez csak egy nagyon alapvető áttekintés a D&D szabályairól. A játék teljes szabályrendszere sokkal részletesebb, és rengeteg kiegészítő könyv és szabály létezik, amelyek lehetővé teszik a játékosok számára, hogy egyedi karaktereket készítsenek és különböző világokban kalandozzanak.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+
+class Jester
+{
+    // Tulajdonságok (attribútumok)
+    public int Charisma { get; set; }
+    public int Dexterity { get; set; }
+    public int Humor { get; set; }
+
+    // Konstruktor
+    public Jester(int charisma, int dexterity, int humor)
+    {
+        Charisma = charisma;
+        Dexterity = dexterity;
+        Humor = humor;
+    }
+
+    // Képességek
+    public void PerformTrick()
+    {
+        Console.WriteLine("A jester előad egy trükköt, amely elkápráztatja a közönséget!");
+        int successChance = Charisma + Dexterity + Humor;
+        if (successChance > 25)
+        {
+            Console.WriteLine("A trükk sikerült! A közönség nevetése betölti a teret.");
+        }
+        else
+        {
+            Console.WriteLine("A trükk nem sikerült! De legalább próbálkozott.");
+        }
+    }
+
+    public void CauseChaos()
+    {
+        Console.WriteLine("A jester zűrzavart kelt a csatamezőn, eltereli az ellenség figyelmét.");
+        int successChance = Dexterity + Humor;
+        if (successChance > 20)
+        {
+            Console.WriteLine("A zűrzavar sikerült, az ellenség zavartan cselekszik.");
+        }
+        else
+        {
+            Console.WriteLine("A zűrzavar nem teljesen működött, de az ellenség egy pillanatra elbizonytalanodott.");
+        }
+    }
+
+    public void InspireAlly()
+    {
+        Console.WriteLine("A jester inspirálja a szövetségeseit, hogy bátran folytassák a küzdelmet.");
+        int successChance = Charisma + Humor;
+        if (successChance > 20)
+        {
+            Console.WriteLine("A szövetségesek lelkesednek és újra feltöltődnek.");
+        }
+        else
+        {
+            Console.WriteLine("A szövetségesek egy kicsit jobban érzik magukat, de nem teljesen.");
+        }
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Jester példányosítása
+        Jester myJester = new Jester(15, 12, 18);
+
+        Console.WriteLine("Jester karakter statisztikai adatai:");
+        Console.WriteLine($"Karizma: {myJester.Charisma}");
+        Console.WriteLine($"Ügyesség: {myJester.Dexterity}");
+        Console.WriteLine($"Humor: {myJester.Humor}");
+        Console.WriteLine();
+
+        // Képességek bemutatása
+        myJester.PerformTrick();
+        myJester.CauseChaos();
+        myJester.InspireAlly();
+    }
+}

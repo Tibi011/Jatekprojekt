@@ -1,0 +1,42 @@
+Nagyszerű ötlet, hogy egy D&D által inspirált történetet szeretnél készíteni egy kéthetes fejlesztési idővel! Az alábbiakban egy rövid történetet és alapvető vázlatot hozok létre, amely jól illeszkedhet egy kis, kódolható játékhoz. Az egész történet egyszerű, de elég gazdag ahhoz, hogy a játékmenet változatos, izgalmas legyen, és különböző döntések, párbeszédek és harci jelenetek is helyet kapjanak.
+
+---
+
+### **Történetcím:** *Az Elveszett Mágia Szentélye*
+
+### **Háttervázlat:**
+A világ, amelyet a játékosok felfedeznek, egy ősi birodalom maradványain épül, ahol a mágia már évezredekkel ezelőtt eltűnt. A játékosok egy kis faluból indulnak, ahol híreket hallanak egy elfeledett templomról, amelyben egy hatalmas varázslatot rejtettek el. E varázslat ereje képes lehet megváltoztatni a világ sorsát, de egyelőre senki sem tudja, hogy pontosan mi is történt a templommal.
+
+A játékosok célja, hogy felfedezzék a templom titkait, miközben veszélyekkel és magukkal a múlt szellemeivel kell szembenézniük.
+
+### **Történet felépítése:**
+
+#### **1. Fejezet: A küldetés kezdete**
+- **Helyszín:** Kisebb falucska, amely közel fekszik egy elhagyatott erdőhöz.
+- **Történet:** A játékosok a faluba érkeznek, ahol találkoznak egy öreg bölcsel, aki elmondja nekik, hogy egy ősi templom helyét egy titkos térképen találhatják meg. A templom egy varázslatot rejt, amely elhozhatja a világ számára a rég elfeledett mágiát, de valaki más is keresheti ezt a hatalmat. A bölcs arra kéri őket, hogy találják meg a templomot, és ha szükséges, állítsák meg a veszélyes küldetésekkel járó ellenfeleket.
+
+#### **2. Fejezet: Az Elveszett Templom**
+- **Helyszín:** Sűrű, titokzatos erdő, régi romok.
+- **Történet:** Az erdőben a játékosok szembesülnek egy első próbával: egy elhagyatott romban titkos csapdák és egy szellemekkel teli terület vár rájuk. Itt kiderül, hogy az ősi templom maga is egy rejtélyes mágikus védelmi rendszerrel van körülvéve, és valamilyen sötét erő próbálja megakadályozni, hogy bárki felfedezze a templom titkát.
+
+#### **3. Fejezet: A Templom Kapuja**
+- **Helyszín:** A templom bejárata.
+- **Történet:** A templom előtt a játékosok egy hatalmas kapuval találkoznak, amelyet csak akkor lehet kinyitni, ha megfejtik a templom ősi nyelvén írt rejtélyes rúnát. A rejtély megoldása egy logikai feladat, amely különböző válaszlehetőségeket kínál, és a helyes választól függ, hogy sikeresen bejuthatnak-e a templomba, vagy egy csapda aktiválódik.
+
+#### **4. Fejezet: A Templom Belseje**
+- **Helyszín:** Sötét, elhagyott templom belső területei.
+- **Történet:** Ahogy a játékosok belépnek a templomba, egy varázslattal teli világ tárul eléjük. Különböző szinteken találhatók mágikus kincsek, csapdák és rejtett üzenetek. Ahogy haladnak előre, különböző ellenségekkel, elbűvölt lényekkel vagy a templom őrzőivel kell szembenézniük.
+
+#### **5. Fejezet: A Szentély és a Döntés**
+- **Helyszín:** A templom szíve, ahol a mágikus erő lakozik.
+- **Történet:** A templom közepén egy ősi szentély található, amelyen keresztül a varázslat megszerezhető. Azonban a templom legbelsőbb titka az, hogy valaki sötét hatalmat keres, hogy az erejét a világ uralmára használja. A játékosok előtt két választás áll: megszerzik az erőt, hogy a világ javára fordítsák, vagy megakadályozzák, hogy mások hasznot húzzanak belőle.
+
+### **Játékmenet szempontjai:**
+- **Kaland:** Az egész játék egy lineáris történet, amely azonban tartalmaz döntési lehetőségeket a játékmenetben (például a templom titkaihoz vezető útvonalak, döntések a karakterek interakcióiban).
+- **Párbeszédek:** Kulcsszerepe lesz a párbeszéd választásoknak, amelyeken keresztül a játékosok többféleképpen befolyásolhatják a történetet.
+- **Küzdelmek és harcok:** Az ellenségek változatosak, a templom különböző szintjein fokozódnak a veszélyek.
+- **Varázslatok és tárgyak:** A templom különböző részein mágikus tárgyak találhatók, amelyek segítenek a játékosoknak a problémák megoldásában.
+
+---
+
+Ez a történet ideális lehet egy kéthetes fejlesztési időszakra, mivel nem túl hosszú, de tartalmaz elegendő változatos elemet (harc, rejtélyek, párbeszéd, döntések), amelyek szórakoztatóak és kihívást jelenthetnek egy egyszerűbb játékfejlesztési projekthez. A játékosok döntései befolyásolják a történet kimenetelét, így a játékmenet többször is újrajátszható.

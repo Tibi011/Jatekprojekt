@@ -1,0 +1,38 @@
+class Jester
+{
+    // Tulajdonságok (attribútumok)
+    public int Charisma { get; set; }
+    public int Dexterity { get; set; }
+    public int Humor { get; set; }
+
+    // Konstruktor
+    public Jester(int charisma, int dexterity, int humor)
+    {
+        Charisma = charisma;
+        Dexterity = dexterity;
+        Humor = humor;
+    }
+
+
+class Warrior
+{
+    // Tulajdonságok (attribútumok)
+    public int Charisma;
+    public int Dexterity;
+    public int Humor;
+
+    // Konstruktor
+    public Jester(int charisma, int dexterity, int humor)
+    {
+        Charisma = charisma;
+        Dexterity = dexterity;
+        Humor = humor;
+    }
+
+
+
+ConsoleKey billentyu:
+
+
+https://patorjk.com/software/taag/#p=moreopts&h=0&v=0&f=Blocks&t=21%0A%0A
+
