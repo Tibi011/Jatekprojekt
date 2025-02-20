@@ -24,12 +24,12 @@ namespace Jatekprojekt
         static void Main(string[] args)
         {
             string DnD = @" 
-                                ____                                             ___        ____                                       ______                            _            
-                               / __ \__  ______  ____ ____  ____  ____  _____   ( _ )      / __ \_________ _____ _____  ____  _____   / ____/___ _____ ___  ____  ____ _(_)___  ____ _
-                              / / / / / / / __ \/ __ `/ _ \/ __ \/ __ \/ ___/  / __ \/|   / / / / ___/ __ `/ __ `/ __ \/ __ \/ ___/  / /   / __ `/ __ `__ \/ __ \/ __ `/ / __ \/ __ `/
-                             / /_/ / /_/ / / / / /_/ /  __/ /_/ / / / (__  )  / /_/  <   / /_/ / /  / /_/ / /_/ / /_/ / / / (__  )  / /___/ /_/ / / / / / / /_/ / /_/ / / / / / /_/ / 
-                            /_____/\__,_/_/ /_/\__, /\___/\____/_/ /_/____/   \____/\/  /_____/_/   \__,_/\__, /\____/_/ /_/____/   \____/\__,_/_/ /_/ /_/ .___/\__,_/_/_/ /_/\__, /  
-                                              /____/                                                     /____/                                         /_/                  /____/   ";
+    ________                                                              ____    ________                                                     _________                                   .__                  
+    \______ \   __ __   ____     ____    ____    ____    ____    ______  /  _ \   \______ \  _______ _____      ____    ____    ____    ______ \_   ___ \ _____     _____  ______  _____   |__|   ____    ____  
+     |    |  \ |  |  \ /    \   / ___\ _/ __ \  /  _ \  /    \  /  ___/  >  _ </\  |    |  \ \_  __ \\__  \    / ___\  /  _ \  /    \  /  ___/ /    \  \/ \__  \   /     \ \____ \ \__  \  |  |  / ___\  /    \ 
+     |    `   \|  |  /|   |  \ / /_/  >\  ___/ (  <_> )|   |  \ \___ \  /  <_\ \/  |    `   \ |  | \/ / __ \_ / /_/  >(  <_> )|   |  \ \___ \  \     \____ / __ \_|  Y Y  \|  |_> > / __ \_|  | / /_/  >|   |  \
+    /_______  /|____/ |___|  / \___  /  \___  > \____/ |___|  //____  > \_____\ \ /_______  / |__|   (____  / \___  /  \____/ |___|  //____  >  \______  /(____  /|__|_|  /|   __/ (____  /|__| \___  / |___|  /
+            \/             \/ /_____/       \/              \/      \/         \/         \/              \/ /_____/               \/      \/          \/      \/       \/ |__|         \/     /_____/       \/ ";
             string Jatek = @"
                                                                   _   __  _    __ _       __  _____ _   _ _____ _____ ____   __  
                                                                  | | /_/_| |_ /_/| | __  / / | ____| \ | |_   _| ____|  _ \  \ \ 
@@ -49,16 +49,145 @@ namespace Jatekprojekt
                                      | \| |  ___  __ __  ___   ___  __| |    ___  | |    __ _    | |__  __ _   _ _   __ _  | |__ | |_   ___   _ _   ___   __| | (_)
                                      | .` | / -_) \ V / / -_) |_ / / _` |   / -_) | |   / _` |   | / / / _` | | '_| / _` | | / / |  _| / -_) | '_| / -_) / _` |  _ 
                                      |_|\_| \___|  \_/  \___| /__| \__,_|   \___| |_|   \__,_|   |_\_\ \__,_| |_|   \__,_| |_\_\  \__| \___| |_|   \___| \__,_| (_)";
+            string jest = @"
+                                                                                                      ___
+                                                                                                     /\  \
+                                                                                                    /  \/ \
+                                                                                               ___  \   O /  ___
+                                                                                              /    \ \   / /    \
+                                                                                             /   __ -    -  __   \
+                                                                                            /___/ | <>   <> | \___\
+                                                                                            O  ___|    ^    |___  O
+                                                                                             /     \  -^-  /    \
+                                                                                            /   /\  \_____/ /\   \
+                                                                                            \_ / /          \ \_ /
+                                                                                            O   /   /\   /\  \  O
+                                                                                                 \ /  \ /  \ /
+                                                                                                  O    O    O";
+            string wizard = @"
+                                                                                                      ____ 
+                                                                                                  .'* *.'
+                                                                                               __/_*_*(_
+                                                                                              / _______ \
+                                                                                             _\_)/___\(_/_ 
+                                                                                            / _((\- -/))_ \
+                                                                                            \ \())(-)(()/ /
+                                                                                             ' \(((()))/ '
+                                                                                            / ' \)).))/ ' \
+                                                                                           / _ \ - | - /_  \
+                                                                                          (   ( .;''';. .'  )
+                                                                                          _\ __ /    )\ __ /_
+                                                                                            \/  \   ' /  \/
+                                                                                             .'  '...' ' )
+                                                                                              / /  |  \ \
+                                                                                             / .   .   . \
+                                                                                            /   .     .   \
+                                                                                           /   /   |   \   \
+                                                                                         .'   /    b    '.  '.
+                                                                                     _.-'    /     Bb     '-. '-._ 
+                                                                                 _.-'       |      BBb       '-.  '-. 
+                                                                                (________mrf\____.dBBBb.________)____)  ";
+            string arch = @"
+                                                                                                                               |
+                                                                                                                                \.
+                                                                                                                                /|.
+                                                                                                                              /  `|.
+                                                                                                                            /     |.
+                                                                                                                          /       |.
+                                                                                                                        /         `|.
+                                                                                                                      /            |.
+                                                                                                                    /              |.
+                                                                                                                  /                |.
+                                                                             __                                 /                  `|.
+                                                                              -\                              /                     |.
+                                                                                \\                          /                       |.
+                                                                                  \\                      /                         |.
+                                                                                   \|                   /                           |\
+                                                                                     \#####\          /                             ||
+                                                                                 ==###########>     /                               ||
+                                                                                  \##==      \    /                                 ||
+                                                                             ______ =       =|__/___                                ||
+                                                                         ,--' ,----`-,__ ___/'  --,-`-==============================##==========>
+                                                                        \               '        ##_______ ______   ______,--,____,=##,__
+                                                                         `,    __==    ___,-,__,--'#'  ==='      `-'              | ##,-/
+                                                                           `-,____,---'       \####\              |        ____,--\_##,/
+                                                                               #_              |##   \  _____,---==,__,---'         ##
+                                                                                #              ]===--==\                            ||
+                                                                                #,             ]         \                          ||
+                                                                                 #_            |           \                        ||
+                                                                                  ##_       __/'             \                      ||
+                                                                                   ####='     |                \                    |/
+                                                                                    ###       |                  \                  |.
+                                                                                    ##       _'                    \                |.
+                                                                                   ###=======]                       \              |.
+                                                                                  ///        |                         \           ,|.
+                                                                                  //         |                           \         |.
+                                                                                                                           \      ,|.
+                                                                                                                             \    |.
+                                                                                                                               \  |.
+                                                                                                                                 \|.
+                                                                                                                                 /.
+                                                                                                                                |";
+            string bers = @"
+
+                                                                                               __.--|~|--.__                               ,,;/;
+                                                                                             /~     | |    ;~\                          ,;;;/;;'
+                                                                                            /|      | |    ;~\\                      ,;;;;/;;;'
+                                                                                           |/|      \_/   ;;;|\                    ,;;;;/;;;;'
+                                                                                           |/ \          ;;;/  )                 ,;;;;/;;;;;'
+                                                                                       ___ | ______     ;_____ |___....__      ,;;;;/;;;;;'
+                                                                                 ___.-~ \\(| \  \.\ \__/ /./ /:|)~   ~   \   ,;;;;/;;;;;'
+                                                                             /~~~    ~\    |  ~-.     |   .-~: |//  _.-~~--,;;;;/;;;;;'
+                                                                            (.-~___     \.'|    | /-.__.-\|::::| //~     ,;;;;/;;;;;'
+                                                                            /      ~~--._ \|   /          `\:: |/      ,;;;;/;;;;;'
+                                                                         .-|             ~~|   |  /V   V\ |:  |     ,;;;;/;;;;;' \
+                                                                        /                   \  |  ~`^~~^'~ |  /    ,;;;;/;;;;;'    ;
+                                                                       (        \             \|`\._____./'|/    ,;;;;/;;;;;'      '\
+                                                                      / \        \                             ,;;;;/;;;;;'     /    |
+                                                                     |            |                          ,;;;;/;;;;;'      |     |
+                                                                    |`-._          |                       ,;;;;/;;;;;'              \
+                                                                    |             /                      ,;;;;/;;;;;'  \              \__________
+                                                                    (             )                 |  ,;;;;/;;;;;'      |        _.--~
+                                                                     \          \/ \              ,  ;;;;;/;;;;;'       /(     .-~_..--~~~~~~~~~~
+                                                                     \__         '  `       ,     ,;;;;;/;;;;;'    .   /  \   / /~
+                                                                     /          \'  |`._______ ,;;;;;;/;;;;;;'    /   :    \/'/'       /|_/|   ``|
+                                                                    | _.-~~~~-._ |   \ __   .,;;;;;;/;;;;;;' ~~~~'   .'    | |       /~ (/\/    ||
+                                                                    /~ _.-~~~-._\    /~/   ;;;;;;;/;;;;;;;'          |    | |       / ~/_-'|-   /|
+                                                                    (/~         \| /' |   ;;;;;;/;;;;;;;;            ;   | |       (.-~;  /-   / |
+                                                                    |            /___ `-,;;;;;/;;;;;;;;'            |   | |      ,/)  /  /-   /  |
+                                                                     \            \  `-.`---/;;;;;;;;;' |          _'   | |    /'('  /  /|- _/  //
+                                                                       \           /~~/ `-. |;;;;;''    ______.--~~ ~\  | |  ,~)')  /   | \~-==//
+                                                                         \      /~(   `-\  `-.`-;   /|    ))   __-####\ | |   (,   /|    |  \
+                                                                           \  /~.  `-.   `-.( `-.`~~ /##############'~~)| |   '   / |    |   ~\
+                                                                            \(   \    `-._ /~)_/|  /############'       | |      /  \     \_\  `\
+                                                                            ,~`\  `-._  / )#####|/############'   /     | |  _--~ _/ | .-~~____--'
+                                                                           ,'\  `-._  ~)~~ `################'           | | ((~>/~   \ (((' -_
+                                                                         ,'   `-.___)~~      `#############             | |           ~-_     ~\_
+                                                                     _.,'        ,'           `###########              | |            _-~-__    (
+                                                                    |  `-.     ,'              `#########       \       | |          ((.-~~~-~_--~
+                                                                    `\    `-.;'                  `######                | |                 ((.-~~
+                                                                      `-._   )               \     |   |        .       |  \                  
+                                                                          `~~  _/                  |    \               |   `---------------------
+                                                                            |/~                `.  |     \        .     |  O    __.---------------
+                                                                             |                   \ ;      \             |   _.-~
+                                                                             |                    |        |            |  /  |
+                                                                              |                   |         |           |/'  |";
+            Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine(DnD);
+            Console.ResetColor();
+            Console.ForegroundColor= ConsoleColor.Yellow;
             Console.WriteLine(Jatek);
             Console.WriteLine(Kilepes);
+            
             ConsoleKey billentyu;
                 billentyu = Console.ReadKey(true).Key;
        
                 if(billentyu != ConsoleKey.Escape) 
             {
+                
                 Console.Clear();
                 Console.WriteLine(Karakter + " ");
+                Console.ResetColor();
                 Console.Write("\t\t\t\t\t\t\t\t\t\t\t\t");
                 Character karakter = new Character();
                 karakter.Name = Console.ReadLine();
@@ -80,7 +209,6 @@ namespace Jatekprojekt
                 string mag1 = @"
                             3. Mage (Mágus)
                             A mágus a varázslásra összpontosít, és a tudása és bölcsessége révén irányítja az elemeket.
-                            A mágus a legkevésbé védett a közelharci támadások ellen, de rendkívül erős varázslatokkal rendelkezik.
                             Strength(Erő): A mágus erője viszonylag alacsony, mivel ő inkább a varázslatokra épít. 
                             Az erő befolyásolja a fizikai támadásokat, de nem jellemző a mágusra.
                             Defense(Védelem): A mágus védelme alapvetően a varázslataiban rejlik, és a varázslatok által elkerült támadásokban. 
@@ -116,11 +244,138 @@ namespace Jatekprojekt
                         karakter.Defense = 14;  
                         karakter.Dexterity = 12;
                         Console.WriteLine("\n\t\t\t\t\t\t\t\t\t\t\t\tA karaktered létrejött!");
-                        Console.WriteLine($"\t\t\t\t\t\t\t\t\t\t\t\tNév: {karakter.Name}");
-                        Console.WriteLine($"\t\t\t\t\t\t\t\t\t\t\t\tOsztály: {karakter.Class}");
-                        Console.WriteLine($"\t\t\t\t\t\t\t\t\t\t\t\tStrength: {karakter.Strength}");
-                        Console.WriteLine($"\t\t\t\t\t\t\t\t\t\t\t\tDefense: {karakter.Defense}");
-                        Console.WriteLine($"\t\t\t\t\t\t\t\t\t\t\t\tDexterity: {karakter.Dexterity}");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tNév: ");
+                        Console.ResetColor();
+                        Console.WriteLine($"{karakter.Name}");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tOsztály: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Class);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tStrength: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Strength);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tDefense: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Defense);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tDexterity: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Dexterity);
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine(bers);
+                        Console.ResetColor();
+                        Console.WriteLine("Folytatás( ENTER )");
+                    }
+                    else if(osztaly.ToLower() == "archer")
+                            {
+                        Console.WriteLine("\t\t\t\t\t\t\t\t\t\t\t\tArcher kiválasztva.");
+                        karakter.Class = "Archer";
+                        karakter.Strength = 14;
+                        karakter.Defense = 12;
+                        karakter.Constitution = 16;
+                        Console.WriteLine("\n\t\t\t\t\t\t\t\t\t\t\t\tA karaktered létrejött!");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tNév: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Name);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tOsztály: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Class);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tStrength: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Strength);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tDefense: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Defense);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tConstitution: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Constitution);
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine(arch);
+                        Console.ResetColor();
+                        Console.WriteLine("Folytatás( ENTER )");
+                    }
+                    else if (osztaly.ToLower() == "mage")
+                    {
+                        Console.WriteLine("\t\t\t\t\t\t\t\t\t\t\t\tMage kiválasztva.");
+                        karakter.Class = "Mágus";
+                        karakter.Strength = 8;
+                        karakter.Defense = 10;
+                        karakter.Intelligence = 18;
+                        karakter.Wisdom = 14;
+                        Console.WriteLine("\n\t\t\t\t\t\t\t\t\t\t\t\tA karaktered létrejött!");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine($"\t\t\t\t\t\t\t\t\t\t\t\tNév: ");
+                        Console.ResetColor();
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tOsztály: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Class);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tStrength: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Strength);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tDefense: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Defense);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tIntelligence: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Intelligence);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tWisdom: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Wisdom);
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine(wizard);
+                        Console.ResetColor();
+                        Console.WriteLine("Folytatás( ENTER )");
+                    }
+                    else if (osztaly.ToLower() == "jester")
+                    {
+                        Console.WriteLine("\t\t\t\t\t\t\t\t\t\t\t\tJester kiválasztva.");
+                        karakter.Class = "Jester";
+                        karakter.Strength = 10;
+                        karakter.Defense = 12;
+                        karakter.Dexterity = 14;
+                        karakter.Charisma=16;
+                        Console.WriteLine("\n\t\t\t\t\t\t\t\t\t\t\t\tA karaktered létrejött!");
+                        Console.ForegroundColor= ConsoleColor.Red;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tNév: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Name);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tOsztály: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Class);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tStrength: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Strength);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tDefense: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Defense);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tDexterity: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Dexterity);
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tCharisma: ");
+                        Console.ResetColor();
+                        Console.WriteLine(karakter.Charisma);
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine(jest);
+                        Console.ResetColor();
+                        Console.WriteLine("Folytatás( ENTER )");
                     }
                 }
 
@@ -139,7 +394,18 @@ namespace Jatekprojekt
                 Console.WriteLine("Kilépés a játékból.");
             }
 
+            ConsoleKey billentyu1;
+            billentyu1 = Console.ReadKey(true).Key;
 
+            if(billentyu1 == ConsoleKey.Enter)
+            {
+                Console.Clear();
+                Console.WriteLine("A hősök egy ismeretlen, ködbe burkolózott völgy szélén találkoznak egy sebesült küldönccel, \naki azt mondja, hogy a völgyben egy sötét varázsló, Vorlath, egy hatalmas rituálét végez, hogy megszerezze az ősi Fénykő erejét.");
+                Console.WriteLine("Ez a kő képes elnyelni a világ fényét, és a varázsló hatalmával szörnyű dolgokat tehet. A küldönc arra kér, hogy a hősök találják meg és semmisítsék meg Vorlathot, mielőtt túl késő lenne.");
+                Console.WriteLine("Cél:");
+                Console.WriteLine("Küzdj meg Vorlath varázsló szolgáival, tisztítsd meg a völgyet, és akadályozd meg a rituálét.");
+
+            }
 
 
 
