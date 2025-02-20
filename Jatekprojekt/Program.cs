@@ -23,6 +23,7 @@ namespace Jatekprojekt
 
         static void Main(string[] args)
         {
+            
             string DnD = @" 
     ________                                                              ____    ________                                                     _________                                   .__                  
     \______ \   __ __   ____     ____    ____    ____    ____    ______  /  _ \   \______ \  _______ _____      ____    ____    ____    ______ \_   ___ \ _____     _____  ______  _____   |__|   ____    ____  
@@ -402,8 +403,12 @@ namespace Jatekprojekt
                 Console.Clear();
                 Console.WriteLine("A hősök egy ismeretlen, ködbe burkolózott völgy szélén találkoznak egy sebesült küldönccel, \naki azt mondja, hogy a völgyben egy sötét varázsló, Vorlath, egy hatalmas rituálét végez, hogy megszerezze az ősi Fénykő erejét.");
                 Console.WriteLine("Ez a kő képes elnyelni a világ fényét, és a varázsló hatalmával szörnyű dolgokat tehet. A küldönc arra kér, hogy a hősök találják meg és semmisítsék meg Vorlathot, mielőtt túl késő lenne.");
+                Console.WriteLine();
                 Console.WriteLine("Cél:");
                 Console.WriteLine("Küzdj meg Vorlath varázsló szolgáival, tisztítsd meg a völgyet, és akadályozd meg a rituálét.");
+                Console.WriteLine();
+                Console.WriteLine("Térkép:\n A völgy bejárata – A ködös erdő szélén egy ódon, omladozó hídon kell átkelniük a hősöknek.Az út elején egy lupusz(vad farkas) támadja meg őket.\n Ködös erdő – A fák között a köd elnyeli a fényt.Különböző csapdák és támadások várják a hősöket, de egy titkos ösvény is létezik, amelyet ha megtalálnak, elkerülhetik a veszélyeket.\n Varázsló tanyája – A völgy közepén egy nagy, elhagyatott kastély található, ahol Vorlath végzi a rituálét.Itt találkoznak a hősök a végső ellenséggel.\n");
+                
 
             }
 
