@@ -1,0 +1,97 @@
+Történet: A Ködös Völgy Titka
+Bevezetés:
+A hősök egy ismeretlen, ködbe burkolózott völgy szélén találkoznak egy sebesült küldönccel, aki azt mondja, hogy a völgyben egy sötét varázsló, Vorlath, egy hatalmas rituálét végez, hogy megszerezze az ősi Fénykő erejét. Ez a kő képes elnyelni a világ fényét, és a varázsló hatalmával szörnyű dolgokat tehet. A küldönc arra kér, hogy a hősök találják meg és semmisítsék meg Vorlathot, mielőtt túl késő lenne.
+
+Cél:
+Küzdj meg Vorlath varázsló szolgáival, tisztítsd meg a völgyet, és akadályozd meg a rituálét.
+
+Térkép:\n
+A völgy bejárata – A ködös erdő szélén egy ódon, omladozó hídon kell átkelniük a hősöknek. Az út elején egy lupusz (vad farkas) támadja meg őket.\n
+Ködös erdő – A fák között a köd elnyeli a fényt. Különböző csapdák és támadások várják a hősöket, de egy titkos ösvény is létezik, amelyet ha megtalálnak, elkerülhetik a veszélyeket.\n
+Varázsló tanyája – A völgy közepén egy nagy, elhagyatott kastély található, ahol Vorlath végzi a rituálét. Itt találkoznak a hősök a végső ellenséggel.\n
+
+Ellenségek:
+Lupus (vad farkas) – A farkas gyors és erőteljes, de gyenge páncéllal rendelkezik. A támadása egyszerű, de ha túl közel kerülnek hozzá, megsebezheti a hősöket.
+	Képesség: Sebzés +14, gyors mozgás, harcban hátrálás és támadás.
+
+Rohadt Szellem – Egy halott varázsló tanítvány, aki a elhagyatott várban és környékén bolyong. A szellem a lélekerejét használja támadásokhoz, és van esélye fizikai támadásokat elkerülni.
+	Képesség: "Lélekcsapda" – Minden támadással csökkenti a hősök lelkét, amíg el nem pusztítják.
+
+Vorlath, a Sötét Mágus – A fő ellenség, aki a Fénykő erejét használja. Ő a rituálét végezve varázslatokat szór, és varázslatainak nagy része a környezetet manipulálja, például a ködöt sűrítve támad vagy ellenségeit megbénítja.
+	Képesség: "Fényelnyelés" – Minden körben csökkenti a hősök támadásainak erejét, míg ő maga egyre erősebbé válik.
+	Képesség: "Ködös Éjszaka" – A környezetben lévő ködöt sűríti, amely minden hős számára egy körre homályosítja el a látást, és a támadások hatékonyságát csökkenti.
+
+Játékmenet és mechanika:
+Taktikai harc: Minden fordulóban a játékosok választhatják, hogy támadnak, védekeznek, vagy varázslatot használnak, de a köd és a szellem hatásai befolyásolják a döntéseket. A játékosoknak minden ellenség előtt végre kell hajtaniuk egy akciót, hogy túléljék.
+
+Képességek: Minden karakter egyedi képességekkel rendelkezik, mint például varázslás, harci manőverek vagy gyógyítás. A különböző ellenségek eltérő védelmi módszereket igényelnek (például a szellem ellen varázslatokat, a lupusz ellen gyors támadásokat).
+
+Turn-Based System: Mivel turn-based játékról van szó, minden karakternek és ellenségnek saját akcióideje van, így minden körben egy karakter dönthet arról, hogy támad, védekezik, varázsol, vagy pozicionálódik.
+
+Stratégia: A karaktereknek figyelniük kell az ellenségek mozgását és támadásait, mivel a támadások közelről több sebzést okoznak, de távolról is sebezhetők, ha jól időzítik az akciókat.
+
+Befejezés:
+Miután legyőzték Vorlathot és megakadályozták a rituálét, a völgy felszabadul a ködtől, és a Fénykő ereje visszakerül a föld mélyére. A hősök visszatérnek a faluba, ahol hősként ünneplik őket, és mindenki hálás a bátor tetteikért.
+
+Ez a történet egy jó alapot adhat egy turn-based játékhoz, amelyben a harc, a stratégia és a karakterek egyedi képességei kulcsfontosságúak. Könnyen adaptálható különböző szintekre, így lehetőség van arra, hogy fokozatosan nehezebb ellenségekkel találkozzanak a játékosok.
+
+---------------------------------------------------
+(Játékmenet)
+-------
+Kezdés:
+-------
+Jester (passive): ki tudja kerülni a támadásokat (40%)
+		+ buff emotional damage: kevesebbet sebez az enemy ( sikeres beszólás)/ *cirip cirip* (ha nem sikerült)
+		+ hozzá vág egy strand papucsot sikeres találatnál 10 sebzéspontot levesz az ellenségtől
+		
+
+Warrior: rage 25%-al többet sebződik + többet sebez
+	 50% HP alatt többet sebez 15%
+	 + felugrik a levegőbe és lesújt 25% esély van rá hogy 15% védelmet elvesz az ellenségtől
+
+Mage: (passive) mágikus támadásokra kevesebbet sérül
+		heal 15% HP-t vissza ad
+		+ sikeres támadás: ellenség felteleportálódik sebbzés az alapján kap hogy milyen magasra került
+		  sikertelen: hátad mögé teleportálódik + kimaradsz egy körből
+
+Archer: (passive)  ki tudja kerülni a támadásokat (40%)
+		   + buff után bármilyen támadással nagyobb 15%-al találja el az ellenfelet
+		   + erősebb lövés: 50%-al többet sebez 25%-al kevesebb az esély arra hogy eltalája
+
+
+
+//fordított szöveg
+string input = "Hello, World!";
+Console.WriteLine(new string(input.Reverse().ToArray()));
+//
+
+
+  Játékos az erdő szélén áll ahol 2 irányba tud menni:
+	1. Jobbra: Vad farkas - harc
+			- archer: több előnye van itt ("túl közel kerülnek hozzá, megsebezheti a hősöket")
+			- mage: közel marad a warriorhoz: mage -> heal + lassítja a farkast || warrior gyors mozdulatokkal támad
+
+	2. Balra: semmi csak sűrű köd
+			- mage: fényt biztosít
+			
+-----------
+Győz/Balra:
+----------- 
+	Egyenesen tovább az erőbe (Jobb és Bal út össze ér)
+	Tovább előre
+	Elhagyatott kastély bejárata - rohadt szellem - harc
+			- mage: nem tudja kikerülni a szellem a támadását +15% sebbzés
+			- 
+----
+Győz: Előre
+----
+	Kastélyban - rituálé szoba
+	Vorlath - harc
+----
+Győz:
+----
+	Köd eltűnik - játékos győzött és ki tud menni az erdőből
+
+   		 	--Vége a játéknak--
+
+----------------------------------------------------
