@@ -8,7 +8,7 @@ namespace Jatekprojekt
 {
     internal class Program
     {
-        public class Character
+        public class Karakter
         {
             public string Name { get; set; }
             public string Class { get; set; }
@@ -19,10 +19,119 @@ namespace Jatekprojekt
             public int Intelligence { get; set; }
             public int Wisdom { get; set; }
             public int Charisma { get; set; }
+            public int Health { get; set; }
         }
+
+        class Osztalyok
+        {
+            public string Class { get; set; }
+            public int Strength { get; set; }
+            public int Defense { get; set; }
+            public int Dexterity { get; set; }
+            public int Constitution { get; set; }
+            public int Intelligence { get; set; }
+            public int Wisdom { get; set; }
+            public int Charisma { get; set; }
+            public int Health { get; set; }
+        }
+
+        Osztalyok warrior = new Osztalyok
+        {
+            Class = "Warrior",
+            Health = 100,
+            Strength = 16,
+            Defense = 14,
+            Dexterity = 12,
+            Constitution = 0,
+            Intelligence = 0,
+            Wisdom = 0,
+            Charisma=0
+        };
+
+        // Más osztályok, mint Archer, Mage stb. szintén hasonlóan definiálhatók:
+        Osztalyok archer = new Osztalyok
+        {
+            Class = "Archer",
+            Health = 100,
+            Strength = 14,
+            Defense = 12,
+            Dexterity = 0,
+            Constitution = 16,
+            Intelligence = 0,
+            Wisdom = 0,
+            Charisma = 0
+        };
+
+        Osztalyok mage = new Osztalyok
+        {
+            Class = "Mage",
+            Health = 100,
+            Strength = 8,
+            Defense = 10,
+            Dexterity = 0,
+            Constitution = 0,
+            Intelligence = 18,
+            Wisdom = 14,
+            Charisma = 0
+        };
+
+        Osztalyok jester = new Osztalyok
+        {
+            Class = "Jester",
+            Health = 100,
+            Strength = 10,
+            Defense = 12,
+            Dexterity = 14,
+            Constitution = 0,
+            Intelligence = 0,
+            Wisdom = 0,
+            Charisma = 16
+        };
+
+        public class Enemy
+        {
+            public string Name { get; set; }
+            public int Health { set; get; }
+            public int Strength { get; set; }
+            public int Defense { get; set; }
+            
+        }
+
+
+        
+        
+       
+        
+
+        public void PerformTrick()
+        {
+            string[] beszolasok = new string[3];
+            beszolasok[0] = "Akkora paraszt vagy hogy vízummal jöttél ki a dinszóólból!";
+            beszolasok[1] = "Rakd sebességbe az agyad, mielőtt megszólalnál!";
+            beszolasok[2] = "Olyan sötét vagy mint az ágy alatt!";
+            Console.WriteLine("A bolond megpróbálja beoltani az ellenséget");
+            Random succesChance = new Random();
+            Random r=new Random();
+            int g = r.Next(0, 3);
+            int kocka = succesChance.Next(1, 21);
+
+            if (kocka > 9)
+            {
+                Console.WriteLine(beszolasok[g]);
+                Console.WriteLine("Siker! Az ellenség védelme csökkent...");
+                
+            }
+            else
+            {
+                Console.WriteLine("Cirip... Cirip...");
+            }
+        }
+
 
         static void Main(string[] args)
         {
+            
+
             
             string DnD = @" 
     ________                                                              ____    ________                                                     _________                                   .__                  
@@ -166,12 +275,116 @@ namespace Jatekprojekt
                                                                                                /   .' || '.   \
                                                                                               /   /   ||   \   \
                                                                                              (__.'    \/    '.__)";
+            string attack = @"
+                                                                                  _____ __                      _   __      
+                                                                                 |_   _/_/_ _ __ ___   __ _  __| | /_/_ ___ 
+                                                                                   | |/ _` | '_ ` _ \ / _` |/ _` |/ _` / __|
+                                                                                   | | (_| | | | | | | (_| | (_| | (_| \__ \
+                                                                                   |_|\__,_|_| |_| |_|\__,_|\__,_|\__,_|___/";
+            string ability = @"
+                                                                                    _  __ __                       __       
+                                                                                   | |/ //_/ _ __   ___  ___ ___  /_/  __ _ 
+                                                                                   | ' // _ \ '_ \ / _ \/ __/ __|/ _ \/ _` |
+                                                                                   | . \  __/ |_) |  __/\__ \__ \  __/ (_| |
+                                                                                   |_|\_\___| .__/ \___||___/___/\___|\__, |
+                                                                                            |_|                       |___/";
+
+
+            Enemy Lupus = new Enemy();
+            Lupus.Name = "Lupus";
+            Lupus.Health = 100;
+            Lupus.Strength = 15;
+            Lupus.Defense = 10;
+            Karakter karakter = new Karakter();
+
+            // Osztályok létrehozása
+            Osztalyok warrior = new Osztalyok
+            {
+                Class = "Warrior",
+                Strength = 16,
+                Defense = 14,
+                Dexterity = 12,
+                Constitution = 0,
+                Intelligence = 0,
+                Wisdom = 0,
+                Charisma = 0
+            };
+
+            Osztalyok archer = new Osztalyok
+            {
+                Class = "Archer",
+                Strength = 14,
+                Defense = 12,
+                Dexterity = 0,
+                Constitution = 16,
+                Intelligence = 0,
+                Wisdom = 0,
+                Charisma = 0
+            };
+
+            Osztalyok mage = new Osztalyok
+            {
+                Class= "Mage",
+                Strength = 8,
+                Defense = 10,
+                Dexterity = 0,
+                Constitution = 0,
+                Intelligence = 18,
+                Wisdom = 14,
+                Charisma = 0
+            };
+
+            Osztalyok jester = new Osztalyok
+            {
+                Class="Jester",
+                Strength = 10,
+                Defense = 8,
+                Dexterity = 5,
+                Constitution = 0,
+                Intelligence = 0,
+                Wisdom = 0,
+                Charisma = 0
+            };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine(DnD);
             Console.ResetColor();
             Console.ForegroundColor= ConsoleColor.Yellow;
             Console.WriteLine(Jatek);
             Console.WriteLine(Kilepes);
+            
             
             ConsoleKey billentyu;
                 billentyu = Console.ReadKey(true).Key;
@@ -183,7 +396,7 @@ namespace Jatekprojekt
                 Console.WriteLine(Karakter + " ");
                 Console.ResetColor();
                 Console.Write("\t\t\t\t\t\t\t\t\t\t\t\t");
-                Character karakter = new Character();
+    
                 karakter.Name = Console.ReadLine();
                 Console.Clear();
             osztalyvalaszt:
@@ -233,10 +446,11 @@ namespace Jatekprojekt
                     if (osztaly.ToLower() == "warrior")
                     {
                         Console.WriteLine("\t\t\t\t\t\t\t\t\t\t\t\tWarrior kiválasztva.");
-                        karakter.Class = "Harcos";
-                        karakter.Strength = 16;  
-                        karakter.Defense = 14;  
-                        karakter.Dexterity = 12;
+                        karakter.Class = warrior.Class;
+                        karakter.Health = warrior.Health;
+                        karakter.Strength = warrior.Strength;  
+                        karakter.Defense = warrior.Defense;  
+                        karakter.Dexterity = warrior.Dexterity;
                         Console.WriteLine("\n\t\t\t\t\t\t\t\t\t\t\t\tA karaktered létrejött!");
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tNév: ");
@@ -266,10 +480,11 @@ namespace Jatekprojekt
                     else if(osztaly.ToLower() == "archer")
                             {
                         Console.WriteLine("\t\t\t\t\t\t\t\t\t\t\t\tArcher kiválasztva.");
-                        karakter.Class = "Archer";
-                        karakter.Strength = 14;
-                        karakter.Defense = 12;
-                        karakter.Constitution = 16;
+                        karakter.Class = archer.Class;
+                        karakter.Health = archer.Health;
+                        karakter.Strength = archer.Strength;
+                        karakter.Defense = archer.Defense;
+                        karakter.Constitution = archer.Constitution;
                         Console.WriteLine("\n\t\t\t\t\t\t\t\t\t\t\t\tA karaktered létrejött!");
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tNév: ");
@@ -299,10 +514,11 @@ namespace Jatekprojekt
                     else if (osztaly.ToLower() == "mage")
                     {
                         Console.WriteLine("\t\t\t\t\t\t\t\t\t\t\t\tMage kiválasztva.");
-                        karakter.Class = "Mágus";
-                        karakter.Strength = 8;
-                        karakter.Defense = 10;
-                        karakter.Intelligence = 18;
+                        karakter.Class = mage.Class;
+                        karakter.Health = mage.Health;
+                        karakter.Strength = mage.Strength;
+                        karakter.Defense = mage.Defense;
+                        karakter.Intelligence = mage.Intelligence;
                         karakter.Wisdom = 14;
                         Console.WriteLine("\n\t\t\t\t\t\t\t\t\t\t\t\tA karaktered létrejött!");
                         Console.ForegroundColor = ConsoleColor.Red;
@@ -336,7 +552,8 @@ namespace Jatekprojekt
                     else if (osztaly.ToLower() == "jester")
                     {
                         Console.WriteLine("\t\t\t\t\t\t\t\t\t\t\t\tJester kiválasztva.");
-                        karakter.Class = "Jester";
+                        karakter.Class = jester.Class;
+                        karakter.Health = jester.Health;
                         karakter.Strength = 10;
                         karakter.Defense = 12;
                         karakter.Dexterity = 14;
@@ -387,7 +604,7 @@ namespace Jatekprojekt
             {
                 Console.WriteLine("Kilépés a játékból.");
             }
-
+                
             ConsoleKey billentyu1;
             billentyu1 = Console.ReadKey(true).Key;
 
@@ -401,7 +618,47 @@ namespace Jatekprojekt
                 Console.WriteLine("Küzdj meg Vorlath varázsló szolgáival, tisztítsd meg a völgyet, és akadályozd meg a rituálét.");
                 Console.WriteLine();
                 Console.WriteLine("Térkép:\n A völgy bejárata – A ködös erdő szélén egy ódon, omladozó hídon kell átkelniük a hősöknek.Az út elején egy lupusz(vad farkas) támadja meg őket.\n Ködös erdő – A fák között a köd elnyeli a fényt.Különböző csapdák és támadások várják a hősöket, de egy titkos ösvény is létezik, amelyet ha megtalálnak, elkerülhetik a veszélyeket.\n Varázsló tanyája – A völgy közepén egy nagy, elhagyatott kastély található, ahol Vorlath végzi a rituálét.Itt találkoznak a hősök a végső ellenséggel.\n");
-                
+                Console.WriteLine("Az erdő szélén állsz és két irányba tudsz menni, mit választasz? (Jobb | Bal)");
+                string valasz1=Console.ReadLine();
+                if(valasz1.ToLower() == "jobb")
+                {
+                    Console.Clear();
+                    Console.WriteLine("Egy vad farkas rád támadott!");
+                    Console.WriteLine($"{attack}\n{ability}");
+                    Console.WriteLine($"Név:{karakter.Name}\nHealth:{karakter.Health}\nStrength:{karakter.Strength}\nDefense:{karakter.Defense}\nDexterity:{karakter.Dexterity}\nConstitution:{karakter.Constitution}\nIntelligence:{karakter.Intelligence}\nWisdom:{karakter.Wisdom}\nCharisma:{karakter.Charisma}");
+                    Console.WriteLine();
+                    Console.WriteLine($"Ellenség:\nNév:{Lupus.Name}\nHealth:{karakter.Health}Strength:{ Lupus.Strength}\nDefense:{ Lupus.Defense}");
+                    Console.WriteLine();
+                    Console.WriteLine("Válassz: (Támadás(1) | Képesség(2) )");
+                    int valasz2 = int.Parse(Console.ReadLine());
+                    if (valasz2 == 1)
+                    {
+                        Random kockadob = new Random();
+                        int kockalandol = kockadob.Next(1, 21);
+                        if (kockalandol > 5)
+                        {
+                            Console.WriteLine("Támadás sikeres");
+                            Lupus.Health=Lupus.Health - (karakter.Strength - Lupus.Defense/2);
+                            Console.WriteLine($"Lupus health:{Lupus.Health}");
+                        }
+                        else
+                        {
+                            Console.WriteLine("A támadás nem talált");
+                        }
+                    }
+
+                    
+
+                }
+                //Játékos az erdő szélén áll ahol 2 irányba tud menni:
+                //1.Jobbra: Vad farkas -harc
+                //- archer: több előnye van itt("túl közel kerülnek hozzá, megsebezheti a hősöket")
+                //-mage: közel marad a warriorhoz: mage->heal + lassítja a farkast || warrior gyors mozdulatokkal támad
+                //Dexterity = 0,
+                //Constitution = 0,
+                //Intelligence = 18,
+                //Wisdom = 14,
+                //Charisma = 0
 
             }
 
