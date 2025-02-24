@@ -81,7 +81,7 @@ namespace Jatekprojekt
         {
             Class = "Jester",
             Health = 100,
-            Strength = 10,
+            Strength = 15,
             Defense = 12,
             Dexterity = 14,
             Constitution = 0,
@@ -302,7 +302,7 @@ namespace Jatekprojekt
             Enemy Lupus = new Enemy();
             Lupus.Name = "Lupus";
             Lupus.Health = 100;
-            Lupus.Strength = 15;
+            Lupus.Strength = 10;
             Lupus.Defense = 10;
             Karakter karakter = new Karakter();
 
@@ -347,7 +347,7 @@ namespace Jatekprojekt
             {
                 Class = "Jester",
                 Health=100,
-                Strength = 10,
+                Strength = 15,
                 Defense = 8,
                 Dexterity = 5,
                 Constitution = 0,
@@ -565,7 +565,7 @@ namespace Jatekprojekt
                         Console.WriteLine("\t\t\t\t\t\t\t\t\t\t\t\tJester kiválasztva.");
                         karakter.Class = jester.Class;
                         karakter.Health = jester.Health;
-                        karakter.Strength = 10;
+                        karakter.Strength = jester.Strength;
                         karakter.Defense = 12;
                         karakter.Dexterity = 14;
                         karakter.Charisma = 16;
@@ -687,25 +687,24 @@ namespace Jatekprojekt
                         }
 
 
-                        if (karakter.Health > 0 || Lupus.Health > 0)
+                        if (karakter.Health > 0 && Lupus.Health > 0)
                         {
                             Thread.Sleep(1000);
                             Console.Clear();
                             goto harc1;
                         }
-
+                        
                         
 
 
-                    } while (karakter.Health > 0 || Lupus.Health > 0);
+                    } while (karakter.Health > 0 && Lupus.Health > 0);
 
                     if(Lupus.Health < 0)
                     {
-                        Console.WriteLine("Győztél!");
+                        Console.WriteLine("Győztél");
                         Console.WriteLine("Folytatás...");
                     }
-
-                    else if(karakter.Health < 0)
+                    else
                     {
                         Console.WriteLine("Vesztettél.");
                     }
