@@ -703,6 +703,7 @@ namespace Jatekprojekt
                     {
                         Console.WriteLine("Győztél");
                         Console.WriteLine("Folytatás...");
+                        karakter.Health = 100;
                     }
                     else
                     {
