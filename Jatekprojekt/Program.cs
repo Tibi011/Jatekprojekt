@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Jatekprojekt
 {
@@ -33,6 +34,7 @@ namespace Jatekprojekt
             public int Wisdom { get; set; }
             public int Charisma { get; set; }
             public int Health { get; set; }
+
         }
 
         Osztalyok warrior = new Osztalyok
@@ -45,7 +47,7 @@ namespace Jatekprojekt
             Constitution = 0,
             Intelligence = 0,
             Wisdom = 0,
-            Charisma=0
+            Charisma = 0
         };
 
         // Más osztályok, mint Archer, Mage stb. szintén hasonlóan definiálhatók:
@@ -94,45 +96,52 @@ namespace Jatekprojekt
             public int Health { set; get; }
             public int Strength { get; set; }
             public int Defense { get; set; }
-            
+
+
         }
 
 
-        
-        
-       
-        
 
-        public void PerformTrick()
+
+
+
+
+        public class TrickPerformer
         {
-            string[] beszolasok = new string[3];
-            beszolasok[0] = "Akkora paraszt vagy hogy vízummal jöttél ki a dinszóólból!";
-            beszolasok[1] = "Rakd sebességbe az agyad, mielőtt megszólalnál!";
-            beszolasok[2] = "Olyan sötét vagy mint az ágy alatt!";
-            Console.WriteLine("A bolond megpróbálja beoltani az ellenséget");
-            Random succesChance = new Random();
-            Random r=new Random();
-            int g = r.Next(0, 3);
-            int kocka = succesChance.Next(1, 21);
+            public void PerformTrick()
+            {
+                string[] beszolasok = new string[3];
+                beszolasok[0] = "Akkora paraszt vagy hogy vízummal jöttél ki a dinszóólból!";
+                beszolasok[1] = "Rakd sebességbe az agyad, mielőtt megszólalnál!";
+                beszolasok[2] = "Olyan sötét vagy mint az ágy alatt!";
+                Console.WriteLine("A bolond megpróbálja beoltani az ellenséget");
+                Random succesChance = new Random();
+                Random r = new Random();
+                int g = r.Next(0, 3);
+                int kocka = succesChance.Next(1, 21);
 
-            if (kocka > 9)
-            {
-                Console.WriteLine(beszolasok[g]);
-                Console.WriteLine("Siker! Az ellenség védelme csökkent...");
-                
-            }
-            else
-            {
-                Console.WriteLine("Cirip... Cirip...");
+                if (kocka > 9)
+                {
+                    Console.WriteLine(beszolasok[g]);
+                    Console.WriteLine("Siker! Az ellenség védelme csökkent...");
+
+                }
+                else
+                {
+                    Console.WriteLine(beszolasok[g]);
+                    Console.WriteLine("Cirip... Cirip...");
+                }
             }
         }
-
 
         static void Main(string[] args)
         {
-            
+            TrickPerformer performer = new TrickPerformer();
 
-            
+
+
+
+
             string DnD = @" 
     ________                                                              ____    ________                                                     _________                                   .__                  
     \______ \   __ __   ____     ____    ____    ____    ____    ______  /  _ \   \______ \  _______ _____      ____    ____    ____    ______ \_   ___ \ _____     _____  ______  _____   |__|   ____    ____  
@@ -324,7 +333,7 @@ namespace Jatekprojekt
 
             Osztalyok mage = new Osztalyok
             {
-                Class= "Mage",
+                Class = "Mage",
                 Strength = 8,
                 Defense = 10,
                 Dexterity = 0,
@@ -336,14 +345,16 @@ namespace Jatekprojekt
 
             Osztalyok jester = new Osztalyok
             {
-                Class="Jester",
+                Class = "Jester",
+                Health=100,
                 Strength = 10,
                 Defense = 8,
                 Dexterity = 5,
                 Constitution = 0,
                 Intelligence = 0,
                 Wisdom = 0,
-                Charisma = 0
+                Charisma = 0,
+
             };
 
 
@@ -381,22 +392,22 @@ namespace Jatekprojekt
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine(DnD);
             Console.ResetColor();
-            Console.ForegroundColor= ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(Jatek);
             Console.WriteLine(Kilepes);
-            
-            
+
+
             ConsoleKey billentyu;
-                billentyu = Console.ReadKey(true).Key;
-       
-                if(billentyu != ConsoleKey.Escape) 
+            billentyu = Console.ReadKey(true).Key;
+
+            if (billentyu != ConsoleKey.Escape)
             {
-                
+
                 Console.Clear();
                 Console.WriteLine(Karakter + " ");
                 Console.ResetColor();
                 Console.Write("\t\t\t\t\t\t\t\t\t\t\t\t");
-    
+
                 karakter.Name = Console.ReadLine();
                 Console.Clear();
             osztalyvalaszt:
@@ -448,8 +459,8 @@ namespace Jatekprojekt
                         Console.WriteLine("\t\t\t\t\t\t\t\t\t\t\t\tWarrior kiválasztva.");
                         karakter.Class = warrior.Class;
                         karakter.Health = warrior.Health;
-                        karakter.Strength = warrior.Strength;  
-                        karakter.Defense = warrior.Defense;  
+                        karakter.Strength = warrior.Strength;
+                        karakter.Defense = warrior.Defense;
                         karakter.Dexterity = warrior.Dexterity;
                         Console.WriteLine("\n\t\t\t\t\t\t\t\t\t\t\t\tA karaktered létrejött!");
                         Console.ForegroundColor = ConsoleColor.Red;
@@ -477,8 +488,8 @@ namespace Jatekprojekt
                         Console.ResetColor();
                         Console.WriteLine("Folytatás( ENTER )");
                     }
-                    else if(osztaly.ToLower() == "archer")
-                            {
+                    else if (osztaly.ToLower() == "archer")
+                    {
                         Console.WriteLine("\t\t\t\t\t\t\t\t\t\t\t\tArcher kiválasztva.");
                         karakter.Class = archer.Class;
                         karakter.Health = archer.Health;
@@ -557,9 +568,10 @@ namespace Jatekprojekt
                         karakter.Strength = 10;
                         karakter.Defense = 12;
                         karakter.Dexterity = 14;
-                        karakter.Charisma=16;
+                        karakter.Charisma = 16;
+
                         Console.WriteLine("\n\t\t\t\t\t\t\t\t\t\t\t\tA karaktered létrejött!");
-                        Console.ForegroundColor= ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write($"\t\t\t\t\t\t\t\t\t\t\t\tNév: ");
                         Console.ResetColor();
                         Console.WriteLine(karakter.Name);
@@ -604,11 +616,11 @@ namespace Jatekprojekt
             {
                 Console.WriteLine("Kilépés a játékból.");
             }
-                
+
             ConsoleKey billentyu1;
             billentyu1 = Console.ReadKey(true).Key;
 
-            if(billentyu1 == ConsoleKey.Enter)
+            if (billentyu1 == ConsoleKey.Enter)
             {
                 Console.Clear();
                 Console.WriteLine("A hősök egy ismeretlen, ködbe burkolózott völgy szélén találkoznak egy sebesült küldönccel, \naki azt mondja, hogy a völgyben egy sötét varázsló, Vorlath, egy hatalmas rituálét végez, hogy megszerezze az ősi Fénykő erejét.");
@@ -619,65 +631,117 @@ namespace Jatekprojekt
                 Console.WriteLine();
                 Console.WriteLine("Térkép:\n A völgy bejárata – A ködös erdő szélén egy ódon, omladozó hídon kell átkelniük a hősöknek.Az út elején egy lupusz(vad farkas) támadja meg őket.\n Ködös erdő – A fák között a köd elnyeli a fényt.Különböző csapdák és támadások várják a hősöket, de egy titkos ösvény is létezik, amelyet ha megtalálnak, elkerülhetik a veszélyeket.\n Varázsló tanyája – A völgy közepén egy nagy, elhagyatott kastély található, ahol Vorlath végzi a rituálét.Itt találkoznak a hősök a végső ellenséggel.\n");
                 Console.WriteLine("Az erdő szélén állsz és két irányba tudsz menni, mit választasz? (Jobb | Bal)");
-                string valasz1=Console.ReadLine();
-                if(valasz1.ToLower() == "jobb")
+                string valasz1 = Console.ReadLine();
+                if (valasz1.ToLower() == "jobb")
                 {
                     Console.Clear();
                     Console.WriteLine("Egy vad farkas rád támadott!");
+                    harc1:
                     Console.WriteLine($"{attack}\n{ability}");
                     Console.WriteLine($"Név:{karakter.Name}\nHealth:{karakter.Health}\nStrength:{karakter.Strength}\nDefense:{karakter.Defense}\nDexterity:{karakter.Dexterity}\nConstitution:{karakter.Constitution}\nIntelligence:{karakter.Intelligence}\nWisdom:{karakter.Wisdom}\nCharisma:{karakter.Charisma}");
                     Console.WriteLine();
-                    Console.WriteLine($"Ellenség:\nNév:{Lupus.Name}\nHealth:{karakter.Health}Strength:{ Lupus.Strength}\nDefense:{ Lupus.Defense}");
+                    Console.WriteLine($"Ellenség:\nNév:{Lupus.Name}\nHealth:{karakter.Health}\nStrength:{ Lupus.Strength}\nDefense:{ Lupus.Defense}");
                     Console.WriteLine();
                     Console.WriteLine("Válassz: (Támadás(1) | Képesség(2) )");
                     int valasz2 = int.Parse(Console.ReadLine());
-                    if (valasz2 == 1)
+
+
+
+                    do
                     {
-                        Random kockadob = new Random();
-                        int kockalandol = kockadob.Next(1, 21);
-                        if (kockalandol > 5)
+                        if (valasz2 == 1)
                         {
+                            Random kockadob = new Random();
+                            int kockalandol = kockadob.Next(1, 21);
+                            if (kockalandol > 9)
+                            {
+                                Console.WriteLine("Támadás sikeres");
+                                Lupus.Health = Lupus.Health - karakter.Strength;
+                                Console.WriteLine($"Lupus health:{Lupus.Health}");
+
+                            }
+                            else
+                            {
+                                Console.WriteLine("A támadás nem talált");
+                            }
+                        }
+
+                        else if (valasz2 == 2)
+                        {
+                            performer.PerformTrick();
+                        }
+                        Console.WriteLine("Lupus támad!");
+                        Random kockadob2 = new Random();
+                        int kockalandol2 = kockadob2.Next(1, 21);
+                        if (kockalandol2 > 9)
+                        {
+                            
                             Console.WriteLine("Támadás sikeres");
-                            Lupus.Health=Lupus.Health - (karakter.Strength - Lupus.Defense/2);
-                            Console.WriteLine($"Lupus health:{Lupus.Health}");
+                            karakter.Health = karakter.Health - Lupus.Strength;
+                            Console.WriteLine($"{karakter.Name} health:{karakter.Health}");
+
                         }
                         else
                         {
                             Console.WriteLine("A támadás nem talált");
                         }
+
+
+                        if (karakter.Health > 0 || Lupus.Health > 0)
+                        {
+                            Thread.Sleep(1000);
+                            Console.Clear();
+                            goto harc1;
+                        }
+
+                        
+
+
+                    } while (karakter.Health > 0 || Lupus.Health > 0);
+
+                    if(Lupus.Health < 0)
+                    {
+                        Console.WriteLine("Győztél!");
+                        Console.WriteLine("Folytatás...");
                     }
 
-                    
+                    else if(karakter.Health < 0)
+                    {
+                        Console.WriteLine("Vesztettél.");
+                    }
+
+
+
+
+                    //Játékos az erdő szélén áll ahol 2 irányba tud menni:
+                    //1.Jobbra: Vad farkas -harc
+                    //- archer: több előnye van itt("túl közel kerülnek hozzá, megsebezheti a hősöket")
+                    //-mage: közel marad a warriorhoz: mage->heal + lassítja a farkast || warrior gyors mozdulatokkal támad
+                    //Dexterity = 0,
+                    //Constitution = 0,
+                    //Intelligence = 18,
+                    //Wisdom = 14,
+                    //Charisma = 0
 
                 }
-                //Játékos az erdő szélén áll ahol 2 irányba tud menni:
-                //1.Jobbra: Vad farkas -harc
-                //- archer: több előnye van itt("túl közel kerülnek hozzá, megsebezheti a hősöket")
-                //-mage: közel marad a warriorhoz: mage->heal + lassítja a farkast || warrior gyors mozdulatokkal támad
-                //Dexterity = 0,
-                //Constitution = 0,
-                //Intelligence = 18,
-                //Wisdom = 14,
-                //Charisma = 0
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                Console.ReadKey();
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            Console.ReadKey();
         }
     }
 }
