@@ -100,12 +100,6 @@ namespace Jatekprojekt
 
         }
 
-
-
-
-
-
-
         public class TrickPerformer
         {
             public void PerformTrick()
@@ -114,7 +108,7 @@ namespace Jatekprojekt
                 beszolasok[0] = "Akkora paraszt vagy hogy vízummal jöttél ki a dinszóólból!";
                 beszolasok[1] = "Rakd sebességbe az agyad, mielőtt megszólalnál!";
                 beszolasok[2] = "Olyan sötét vagy mint az ágy alatt!";
-                Console.WriteLine("A bolond megpróbálja beoltani az ellenséget");
+                Console.WriteLine("A hős megpróbálja beoltani az ellenséget");
                 Random succesChance = new Random();
                 Random r = new Random();
                 int g = r.Next(0, 3);
@@ -123,7 +117,7 @@ namespace Jatekprojekt
                 if (kocka > 9)
                 {
                     Console.WriteLine(beszolasok[g]);
-                    Console.WriteLine("Siker! Az ellenség védelme csökkent...");
+                    Console.WriteLine("Siker! Az ellenség elszégyelte magát...");
 
                 }
                 else
@@ -133,6 +127,13 @@ namespace Jatekprojekt
                 }
             }
         }
+
+
+
+
+
+
+
 
         static void Main(string[] args)
         {
@@ -298,18 +299,23 @@ namespace Jatekprojekt
                                                                                    |_|\_\___| .__/ \___||___/___/\___|\__, |
                                                                                             |_|                       |___/";
 
-
             Enemy Lupus = new Enemy();
             Lupus.Name = "Lupus";
             Lupus.Health = 100;
             Lupus.Strength = 10;
             Lupus.Defense = 10;
+            Enemy Vorlath = new Enemy();
+            Vorlath.Name = "Vorlath";
+            Vorlath.Health = 200;
+            Vorlath.Strength = 25;
+            Vorlath.Defense = 20;
             Karakter karakter = new Karakter();
 
             // Osztályok létrehozása
             Osztalyok warrior = new Osztalyok
             {
                 Class = "Warrior",
+                Health = 100,
                 Strength = 16,
                 Defense = 14,
                 Dexterity = 12,
@@ -322,6 +328,7 @@ namespace Jatekprojekt
             Osztalyok archer = new Osztalyok
             {
                 Class = "Archer",
+                Health= 100,
                 Strength = 14,
                 Defense = 12,
                 Dexterity = 0,
@@ -334,6 +341,7 @@ namespace Jatekprojekt
             Osztalyok mage = new Osztalyok
             {
                 Class = "Mage",
+                Health=100,
                 Strength = 8,
                 Defense = 10,
                 Dexterity = 0,
@@ -357,6 +365,7 @@ namespace Jatekprojekt
 
             };
 
+            
 
 
 
@@ -389,7 +398,9 @@ namespace Jatekprojekt
 
 
 
-            Console.ForegroundColor = ConsoleColor.Magenta;
+
+
+        Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine(DnD);
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -640,16 +651,16 @@ namespace Jatekprojekt
                     Console.WriteLine($"{attack}\n{ability}");
                     Console.WriteLine($"Név:{karakter.Name}\nHealth:{karakter.Health}\nStrength:{karakter.Strength}\nDefense:{karakter.Defense}\nDexterity:{karakter.Dexterity}\nConstitution:{karakter.Constitution}\nIntelligence:{karakter.Intelligence}\nWisdom:{karakter.Wisdom}\nCharisma:{karakter.Charisma}");
                     Console.WriteLine();
-                    Console.WriteLine($"Ellenség:\nNév:{Lupus.Name}\nHealth:{karakter.Health}\nStrength:{ Lupus.Strength}\nDefense:{ Lupus.Defense}");
+                    Console.WriteLine($"Ellenség:\nNév:{Lupus.Name}\nHealth:{Lupus.Health}\nStrength:{ Lupus.Strength}\nDefense:{ Lupus.Defense}");
                     Console.WriteLine();
                     Console.WriteLine("Válassz: (Támadás(1) | Képesség(2) )");
-                    int valasz2 = int.Parse(Console.ReadLine());
+                    int valasz4 = int.Parse(Console.ReadLine());
 
 
 
                     do
                     {
-                        if (valasz2 == 1)
+                        if (valasz4 == 1)
                         {
                             Random kockadob = new Random();
                             int kockalandol = kockadob.Next(1, 21);
@@ -666,7 +677,7 @@ namespace Jatekprojekt
                             }
                         }
 
-                        else if (valasz2 == 2)
+                        else if (valasz4 == 2)
                         {
                             performer.PerformTrick();
                         }
@@ -689,7 +700,7 @@ namespace Jatekprojekt
 
                         if (karakter.Health > 0 && Lupus.Health > 0)
                         {
-                            Thread.Sleep(1000);
+                            Thread.Sleep(1500);
                             Console.Clear();
                             goto harc1;
                         }
@@ -703,13 +714,17 @@ namespace Jatekprojekt
                     {
                         Console.WriteLine("Győztél");
                         Console.WriteLine("Folytatás...");
-                        karakter.Health = 100;
+                        karakter.Health = 150;
+                        karakter.Strength = karakter.Strength + 7;
+                        
                     }
                     else
                     {
                         Console.WriteLine("Vesztettél.");
+                        goto jatekveg;
                     }
 
+                
 
 
 
@@ -725,6 +740,184 @@ namespace Jatekprojekt
 
                 }
 
+                else if(valasz1.ToLower() == "bal")
+                {
+                    
+                    Console.WriteLine("Semmi csak sűrű köd...");
+                    Thread.Sleep(2500);
+                    Console.Clear();
+                    Console.WriteLine("Tövább haladsz az erdőben és egy elhagyatott kastélyhoz érsz");
+                    Console.WriteLine("Ahogy belépsz egy rituális szobára találsz");
+                    Console.WriteLine("A szobábn egy tárgyat fellöksz és elindítasz egy rituálét...");
+                    Thread.Sleep(2500);
+                    Console.Clear();
+                    harc2:
+                    Console.WriteLine("Vorlath a rohadt szellem rád támad!");           
+                    Console.WriteLine($"{attack}\n{ability}");
+                    Console.WriteLine($"Név:{karakter.Name}\nHealth:{karakter.Health}\nStrength:{karakter.Strength}\nDefense:{karakter.Defense}\nDexterity:{karakter.Dexterity}\nConstitution:{karakter.Constitution}\nIntelligence:{karakter.Intelligence}\nWisdom:{karakter.Wisdom}\nCharisma:{karakter.Charisma}");
+                    Console.WriteLine();
+                    Console.WriteLine($"Ellenség:\nNév:{Vorlath.Name}\nHealth:{Vorlath.Health}\nStrength:{ Vorlath.Strength}\nDefense:{ Vorlath.Defense}");
+                    Console.WriteLine();
+                    Console.WriteLine("Válassz: (Támadás(1) | Képesség(2) )");
+                    int valasz3 = int.Parse(Console.ReadLine());
+
+
+
+                    do
+                    {
+                        if (valasz3 == 1)
+                        {
+                            Random kockadob = new Random();
+                            int kockalandol = kockadob.Next(1, 21);
+                            if (kockalandol > 9)
+                            {
+                                Console.WriteLine("Támadás sikeres");
+                                Vorlath.Health = Vorlath.Health - karakter.Strength;
+                                Console.WriteLine($"Vorlath health:{Vorlath.Health}");
+
+                            }
+                            else
+                            {
+                                Console.WriteLine("A támadás nem talált");
+                            }
+                        }
+
+                        else if (valasz3 == 2)
+                        {
+                            performer.PerformTrick();
+                        }
+                        Console.WriteLine("Vorlath támad!");
+                        Random kockadob2 = new Random();
+                        int kockalandol2 = kockadob2.Next(1, 21);
+                        if (kockalandol2 > 9)
+                        {
+
+                            Console.WriteLine("Támadás sikeres");
+                            karakter.Health = karakter.Health - Vorlath.Strength;
+                            Console.WriteLine($"{karakter.Name} health:{karakter.Health}");
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("A támadás nem talált");
+                        }
+
+
+                        if (karakter.Health > 0 && Vorlath.Health > 0)
+                        {
+                            Thread.Sleep(1500);
+                            Console.Clear();
+                            goto harc2;
+                        }
+
+
+
+
+                    } while (karakter.Health > 0 && Vorlath.Health > 0);
+
+                    if (Vorlath.Health < 0)
+                    {
+                        Console.WriteLine("Győztél");
+                        karakter.Health = 150;
+                        
+                        goto jatekveg;
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Vesztettél.");
+                        goto jatekveg;
+                    }
+                }
+
+           
+                Console.Clear();
+                Console.WriteLine("Semmi csak sűrű köd...");
+                Thread.Sleep(3000);
+                Console.Clear();
+                Console.WriteLine("Tövább haladsz az erdőben és egy elhagyatott kastélyhoz érsz");
+                Console.WriteLine("Ahogy belépsz egy rituális szobára találsz");
+                Console.WriteLine("A szobábn egy tárgyat fellöksz és elindítasz egy rituálét...");
+                Thread.Sleep(3000);
+                Console.Clear();
+                harc3:
+                Console.WriteLine("Vorlath a rohadt szellem rád támad!");
+                Console.WriteLine($"{attack}\n{ability}");
+                Console.WriteLine($"Név:{karakter.Name}\nHealth:{karakter.Health}\nStrength:{karakter.Strength}\nDefense:{karakter.Defense}\nDexterity:{karakter.Dexterity}\nConstitution:{karakter.Constitution}\nIntelligence:{karakter.Intelligence}\nWisdom:{karakter.Wisdom}\nCharisma:{karakter.Charisma}");
+                Console.WriteLine();
+                Console.WriteLine($"Ellenség:\nNév:{Vorlath.Name}\nHealth:{Vorlath.Health}\nStrength:{ Vorlath.Strength}\nDefense:{ Vorlath.Defense}");
+                Console.WriteLine();
+                Console.WriteLine("Válassz: (Támadás(1) | Képesség(2) )");
+                int valasz2 = int.Parse(Console.ReadLine());
+
+
+
+                do
+                {
+                    if (valasz2 == 1)
+                    {
+                        Random kockadob = new Random();
+                        int kockalandol = kockadob.Next(1, 21);
+                        if (kockalandol > 9)
+                        {
+                            Console.WriteLine("Támadás sikeres");
+                            Vorlath.Health = Vorlath.Health - karakter.Strength;
+                            Console.WriteLine($"Vorlath health:{Vorlath.Health}");
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("A támadás nem talált");
+                        }
+                    }
+
+                    else if (valasz2 == 2)
+                    {
+                        performer.PerformTrick();
+                    }
+                    Console.WriteLine("Vorlath támad!");
+                    Random kockadob2 = new Random();
+                    int kockalandol2 = kockadob2.Next(1, 21);
+                    if (kockalandol2 > 9)
+                    {
+
+                        Console.WriteLine("Támadás sikeres");
+                        karakter.Health = karakter.Health - (Vorlath.Strength-karakter.Defense);
+                        Console.WriteLine($"{karakter.Name} health:{karakter.Health}");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("A támadás nem talált");
+                    }
+
+
+                    if (karakter.Health > 0 && Vorlath.Health > 0)
+                    {
+                        Thread.Sleep(1500);
+                        Console.Clear();
+                        goto harc3;
+                    }
+
+
+
+
+                } while (karakter.Health > 0 && Vorlath.Health > 0);
+
+                if (Vorlath.Health < 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine("A szellem elűzve!");
+                    Console.WriteLine("Az erdőből a köd felszáll...");
+                    karakter.Health = 100;
+                    goto jatekveg;
+
+                }
+                else
+                {
+                    Console.WriteLine("Vesztettél.");
+                    goto jatekveg;
+                }
 
 
 
@@ -737,6 +930,9 @@ namespace Jatekprojekt
 
 
 
+
+            jatekveg:
+                Console.WriteLine("A játéknak vége");
 
 
 
