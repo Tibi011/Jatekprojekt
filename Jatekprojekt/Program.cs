@@ -833,12 +833,12 @@ namespace Jatekprojekt
            
                 Console.Clear();
                 Console.WriteLine("Semmi csak sűrű köd...");
-                Thread.Sleep(3000);
+                Thread.Sleep(2500);
                 Console.Clear();
                 Console.WriteLine("Tövább haladsz az erdőben és egy elhagyatott kastélyhoz érsz");
                 Console.WriteLine("Ahogy belépsz egy rituális szobára találsz");
                 Console.WriteLine("A szobábn egy tárgyat fellöksz és elindítasz egy rituálét...");
-                Thread.Sleep(3000);
+                Thread.Sleep(2500);
                 Console.Clear();
                 harc3:
                 Console.WriteLine("Vorlath a rohadt szellem rád támad!");
